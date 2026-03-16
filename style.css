@@ -1,0 +1,156 @@
+/* STYLE.CSS — Terre Lune */
+
+/* --- BASE --- */
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #111;
+  background-color: #eceaea;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+* { box-sizing: border-box; }
+
+/* --- BLOC 1 : TITRE --- */
+.bloc-titre {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 2.05em;
+  margin-bottom: 1rem;
+}
+
+/* --- BLOC 2 : IMAGE --- */
+.bloc-image { margin-bottom: 1.5rem; }
+.banniere {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- BLOC 3 : SOUS-TITRE --- */
+.bloc-sous-titre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 2rem;
+}
+.sous-titre-ligne {
+  font-weight: 300;
+  letter-spacing: 0.45em;
+}
+
+/* --- BLOC 4 : PRÉSENTATION --- */
+.bloc-presentation {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.bloc-presentation p {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* --- BLOC 5 : PROGRAMMATION --- */
+.bloc-prog {
+  margin-bottom: 1.5rem;
+}
+.bloc-prog ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bloc-prog li {
+  display: flex;
+  gap: 0rem;
+  margin-bottom: 0.2rem;
+  font-weight: 300;
+}
+.bloc-prog li::before { content: none; } /* pas de tiret */
+.heure {
+  min-width: 6rem;   /* aligne les noms d'artistes */
+  color: #111;
+}
+.artiste { font-weight: 300; }
+
+/* --- BLOCS 6 : INFOS (liste standard avec tirets) --- */
+.bloc-info { margin-bottom: 1.5rem; }
+.bloc-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+.bloc-info li {
+  padding-left: 1rem;
+  text-indent: -1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Titres de section communs */
+h2 {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+}
+
+/* --- BLOC 7 : BILLETTERIE --- */
+.bloc-billetterie {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bouton-billet {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+}
+.bouton-billet:hover {
+  background-color: #ce7209;
+  opacity: 1;
+}
+
+/* --- LIENS --- */
+a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { opacity: 0.5; }
+
+/* --- BLOC 9 : PIED DE PAGE --- */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+.footer-liens {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+.footer-collectif {
+  text-align: right;
+  font-weight: 300;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+  .bloc-titre { letter-spacing: 0.5em; }
+  .bloc-presentation { padding-left: 1rem; padding-right: 1rem; }
+  .footer-liens { flex-direction: column; gap: 0.3rem; }
+}
